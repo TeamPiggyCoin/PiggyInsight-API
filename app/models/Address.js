@@ -177,7 +177,7 @@ Address.prototype.update = function(next, opts) {
       if (err) return next(err);
 
       tDb.cacheConfirmations(txOut, function(err) {
-        // console.log('[Address.js.161:txOut:]',txOut); //TODO
+        // console.log('[Address.js.180:txOut:]',txOut); //TODO
         if (err) return next(err);
         if (opts.onlyUnspent) {
           txOut = txOut.filter(function(x) {
@@ -197,7 +197,7 @@ Address.prototype.update = function(next, opts) {
                 confirmations: x.isConfirmedCached ? (config.safeConfirmations) : x.confirmations,
                 confirmationsFromCache: !!x.isConfirmedCached,
               };
-            }), 'scriptPubKey');;
+            }), 'scriptPubKey');
             return next();
           });
         } else {

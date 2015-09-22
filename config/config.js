@@ -21,19 +21,19 @@ function getUserHome() {
 
 var home = process.env.INSIGHT_DB || (getUserHome() + '/.insight');
 
-if (process.env.INSIGHT_NETWORK === 'livenet') {
+//if (process.env.INSIGHT_NETWORK === 'livenet') {
   env = 'livenet';
   db = home;
   port = '3000';
-  b_port = '8332';
-  p2p_port = '8333';
-} else {
-  env = 'testnet';
-  db = home + '/testnet';
-  port = '3001';
-  b_port = '18332';
-  p2p_port = '18333';
-}
+  b_port = '6500';
+  p2p_port = '54481';
+//} else {
+//  env = 'testnet';
+//  db = home + '/testnet';
+//  port = '3001';
+//  b_port = '18332';
+//  p2p_port = '18333';
+//}
 port = parseInt(process.env.INSIGHT_PORT) || port;
 
 
@@ -49,17 +49,17 @@ switch (process.env.NODE_ENV) {
     break;
 }
 
-var network = process.env.INSIGHT_NETWORK || 'testnet';
-var forceRPCsync = process.env.INSIGHT_FORCE_RPC_SYNC;
+var network = process.env.INSIGHT_NETWORK || 'livenet';
+var forceRPCsync = 1; //process.env.INSIGHT_FORCE_RPC_SYNC;
 
 var dataDir = process.env.BITCOIND_DATADIR;
 var isWin = /^win/.test(process.platform);
 var isMac = /^darwin/.test(process.platform);
 var isLinux = /^linux/.test(process.platform);
 if (!dataDir) {
-  if (isWin) dataDir = '%APPDATA%\\Bitcoin\\';
-  if (isMac) dataDir = process.env.HOME + '/Library/Application Support/Bitcoin/';
-  if (isLinux) dataDir = process.env.HOME + '/.bitcoin/';
+  if (isWin) dataDir = '%APPDATA%\\newpiggycoin\\';
+  if (isMac) dataDir = process.env.HOME + '/Library/Application Support/newpiggycoin/';
+  if (isLinux) dataDir = process.env.HOME + '/.newpiggycoin/';
 }
 dataDir += network === 'testnet' ? 'testnet3' : '';
 
@@ -69,8 +69,6 @@ var ignoreCache = process.env.INSIGHT_IGNORE_CACHE || 0;
 
 var bitcoindConf = {
   protocol: process.env.BITCOIND_PROTO || 'http',
-  user: process.env.BITCOIND_USER || 'user',
-  pass: process.env.BITCOIND_PASS || 'pass',
   host: process.env.BITCOIND_HOST || '127.0.0.1',
   port: process.env.BITCOIND_PORT || b_port,
   p2pPort: process.env.BITCOIND_P2P_PORT || p2p_port,
@@ -81,10 +79,10 @@ var bitcoindConf = {
 };
 
 var enableRatelimiter = process.env.ENABLE_RATELIMITER === 'true';
-var enableEmailstore = process.env.ENABLE_EMAILSTORE === 'true';
+var enableEmailstore = process.env.ENABLE_EMAILSTORE === 'false';
 var loggerLevel = process.env.LOGGER_LEVEL || 'info';
-var enableHTTPS = process.env.ENABLE_HTTPS === 'true';
-var enableCurrencyRates = process.env.ENABLE_CURRENCYRATES === 'true';
+var enableHTTPS = process.env.ENABLE_HTTPS === 'false';
+var enableCurrencyRates = process.env.ENABLE_CURRENCYRATES === 'false';
 
 if (!fs.existsSync(db)) {
   mkdirp.sync(db);

@@ -1,8 +1,8 @@
 {
-  "name": "insight-bitcore-api",
-  "description": "An open-source bitcoin blockchain API. The Insight API provides you with a convenient, powerful and simple way to query and broadcast data on the bitcoin network and build your own services with it.",
+  "name": "PiggyInsight-API",
+  "description": "An open-source PiggyCoin blockchain API. The Insight API provides you with a convenient, powerful and simple way to query and broadcast data on the PiggyCoin network and build your own services with it.",
   "version": "0.2.18",
-  "repository": "git://github.com/bitpay/insight-api.git",
+  "repository": "git://github.com/TeamPiggyCoin/PiggyInsight-API.git",
   "contributors": [{
     "name": "Matias Alejo Garcia",
     "email": "ematiu@gmail.com"
@@ -21,11 +21,14 @@
   }, {
     "name": "Ivan Socolsky",
     "email": "jungans@gmail.com"
+  }, {
+    "name": "Leigh Phillips",
+    "email": "neurocis@neurocis.me"
   }],
   "bugs": {
-    "url": "https://github.com/bitpay/insight-api/issues"
+    "url": "https://github.com/TeamPiggyCoin/PiggyInsight-API/issues"
   },
-  "homepage": "https://github.com/bitpay/insight-api",
+  "homepage": "https://github.com/TeamPiggyCoin/PiggyInsight-API",
   "license": "MIT",
   "keywords": [
     "insight",
@@ -34,7 +37,13 @@
     "bitcoin api",
     "blockchain api",
     "json",
-    "bitcore"
+    "bitcore",
+    "piggycoin",
+    "piggyinsight",
+    "piggyinsight api",
+    "piggy",
+    "x11",
+    "stake"
   ],
   "engines": {
     "node": "*"
@@ -48,11 +57,11 @@
     "base58-native": "0.1.2",
     "bignum": "*",
     "morgan": "*",
-    "bitcore": "git://github.com/bitpay/bitcore.git#51c53b16ced6bcaf4b78329955d6814579fe4ee9",
-    "bufferput": "git://github.com/bitpay/node-bufferput.git",
+    "piggycore": "git://github.com/TeamPiggyCoin/PiggyCore.git#45e4fbc83f6f7473f75e16d4de973d7f03666ab7",
+    "bufferput": "git://github.com/TeamPiggyCoin/node-bufferput.git",
     "buffertools": "*",
     "commander": "^2.3.0",
-    "connect-ratelimit": "git://github.com/dharmafly/connect-ratelimit.git#0550eff209c54f35078f46445000797fa942ab97",
+    "connect-ratelimit": "git://github.com/TeamPiggyCoin/connect-ratelimit.git#0550eff209c54f35078f46445000797fa942ab97",
     "cron": "^1.0.4",
     "express": "~3.4.7",
     "glob": "*",
