@@ -1,8 +1,8 @@
 {
-  "name": "PiggyInsight-API",
+  "name": "piggyinsight-api",
   "description": "An open-source PiggyCoin blockchain API. The Insight API provides you with a convenient, powerful and simple way to query and broadcast data on the PiggyCoin network and build your own services with it.",
   "version": "0.2.18",
-  "repository": "git://github.com/TeamPiggyCoin/PiggyInsight-API.git",
+  "repository": "git://github.com/teampiggycoin/piggyinsight-api.git",
   "contributors": [{
     "name": "Matias Alejo Garcia",
     "email": "ematiu@gmail.com"
@@ -26,9 +26,9 @@
     "email": "neurocis@neurocis.me"
   }],
   "bugs": {
-    "url": "https://github.com/TeamPiggyCoin/PiggyInsight-API/issues"
+    "url": "https://github.com/teampiggycoin/piggyinsight-api/issues"
   },
-  "homepage": "https://github.com/TeamPiggyCoin/PiggyInsight-API",
+  "homepage": "https://github.com/teampiggycoin/piggyinsight-api",
   "license": "MIT",
   "keywords": [
     "insight",
@@ -57,11 +57,11 @@
     "base58-native": "0.1.2",
     "bignum": "*",
     "morgan": "*",
-    "piggycore": "git://github.com/TeamPiggyCoin/PiggyCore.git#45e4fbc83f6f7473f75e16d4de973d7f03666ab7",
-    "bufferput": "git://github.com/TeamPiggyCoin/node-bufferput.git",
+    "piggycore": "git://github.com/teampiggycoin/piggycore.git#45e4fbc83f6f7473f75e16d4de973d7f03666ab7",
+    "bufferput": "git://github.com/teampiggycoin/node-bufferput.git",
     "buffertools": "*",
     "commander": "^2.3.0",
-    "connect-ratelimit": "git://github.com/TeamPiggyCoin/connect-ratelimit.git#0550eff209c54f35078f46445000797fa942ab97",
+    "connect-ratelimit": "git://github.com/teampiggycoin/connect-ratelimit.git#0550eff209c54f35078f46445000797fa942ab97",
     "cron": "^1.0.4",
     "express": "~3.4.7",
     "glob": "*",
