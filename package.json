@@ -57,7 +57,7 @@
     "base58-native": "0.1.2",
     "bignum": "*",
     "morgan": "*",
-    "piggycore": "git://github.com/teampiggycoin/piggycore.git#45e4fbc83f6f7473f75e16d4de973d7f03666ab7",
+    "piggycore": "git://github.com/teampiggycoin/piggycore.git#23ea3d5bb960eaa847b2b8c1e2154dee04b72496",
     "bufferput": "git://github.com/teampiggycoin/node-bufferput.git",
     "buffertools": "*",
     "commander": "^2.3.0",
